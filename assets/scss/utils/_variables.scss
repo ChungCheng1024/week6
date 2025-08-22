@@ -4,9 +4,27 @@
 // consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
 
 // Color system
+//自定義中性色
+$natural-95:#f0f3f5;
+$natural-90:#e0e5eb;
+$natural-85:#d1d9e1;
+$natural-75:#b2bfcc;
+$natural-60:#8599ad;
+$natural-50:#667f99;
+$natural-30:#3d4d5c;
+$natural-10:#141a1f;
+$black:$natural-10;
+$dark:$black;
+$white:#fcfcfd;
+$light:$white;
+
+
+
+
+
 
 // scss-docs-start gray-color-variables
-$white:    #fff !default;
+// $white:    #fff !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
@@ -16,7 +34,8 @@ $gray-600: #6c757d !default;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
-$black:    #000 !default;
+// $black:    #000 !default;
+
 // scss-docs-end gray-color-variables
 
 // fusv-disable
@@ -296,10 +315,25 @@ $cyans: (
   "cyan-900": $cyan-900
 ) !default;
 // fusv-enable
+//自訂義主輔色
+$primary-97:#f1f4fd;
+$primary-90:#d2d9f9;
+$primary-80:#a4b4f3;
+$primary-70:#778eee;
+$primary-60:#4a69e8;
+$primary-40:#1736b5;
+$primary-25:#0e2271;
+$primary:$primary-60;
+$secondary-90:#d7f4ec;
+$secondary-70:#87dec5;
+$secondary-50:#36c99f;
+$secondary-35:#268c6f;
+$secondary:$secondary-50;
+
 
 // scss-docs-start theme-color-variables
-$primary:       $blue !default;
-$secondary:     $gray-600 !default;
+// $primary:       $blue !default;
+// $secondary:     $gray-600 !default;
 $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
@@ -310,6 +344,25 @@ $dark:          $gray-900 !default;
 
 // scss-docs-start theme-colors-map
 $theme-colors: (
+  "primary-97":$primary-97,
+  "primary-90":$primary-90,
+  "primary-80":$primary-80,
+  "primary-70":$primary-70,
+  "primary-60":$primary-60,
+  "primary-40":$primary-40,
+  "primary-25":$primary-25,
+  "secondary-90":$secondary-90,
+  "secondary-70":$secondary-70,
+  "secondary-50":$secondary-50,
+  "secondary-35":$secondary-35,
+  "natural-95":$natural-95,
+  "natural-90":$natural-90,
+  "natural-85":$natural-85,
+  "natural-75":$natural-75,
+  "natural-60":$natural-60,
+  "natural-50":$natural-50,
+  "natural-30":$natural-30,
+  "natural-10":$natural-10,
   "primary":    $primary,
   "secondary":  $secondary,
   "success":    $success,
@@ -378,7 +431,8 @@ $enable-grid-classes:         true !default;
 $enable-container-classes:    true !default;
 $enable-cssgrid:              false !default;
 $enable-button-pointers:      true !default;
-$enable-rfs:                  true !default;
+// $enable-rfs:                  true !default;
+$enable-rfs:                  false !default;
 $enable-validation-icons:     true !default;
 $enable-negative-margins:     false !default;
 $enable-deprecation-messages: true !default;
@@ -409,12 +463,21 @@ $gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0)) !default;
 // scss-docs-start spacer-variables-maps
 $spacer: 1rem !default;
 $spacers: (
-  0: 0,
-  1: $spacer * .25,
-  2: $spacer * .5,
-  3: $spacer,
-  4: $spacer * 1.5,
-  5: $spacer * 3,
+  // 0: 0,
+  // 1: $spacer * .25,
+  // 2: $spacer * .5,
+  // 3: $spacer,
+  // 4: $spacer * 1.5,
+  // 5: $spacer * 3,
+  0:0,
+  1:$spacer * .25,
+  2:$spacer * .5,
+  3:$spacer * 0.75,
+  4:$spacer,
+  5:$spacer * 1.5,
+  6:$spacer * 3,
+  7:$spacer * 5,
+
 ) !default;
 // scss-docs-end spacer-variables-maps
 
@@ -544,8 +607,10 @@ $border-color-translucent:    rgba($black, .175) !default;
 // scss-docs-end border-variables
 
 // scss-docs-start border-radius-variables
-$border-radius:               .375rem !default;
-$border-radius-sm:            .25rem !default;
+// $border-radius:               .375rem !default;
+$border-radius:               1rem !default;
+// $border-radius-sm:            .25rem !default;
+$border-radius-sm:            .75rem !default;
 $border-radius-lg:            .5rem !default;
 $border-radius-xl:            1rem !default;
 $border-radius-xxl:           2rem !default;
@@ -556,7 +621,8 @@ $border-radius-2xl:           $border-radius-xxl !default; // Deprecated in v5.3
 // fusv-enable
 
 // scss-docs-start box-shadow-variables
-$box-shadow:                  0 .5rem 1rem rgba($black, .15) !default;
+// $box-shadow:                  0 .5rem 1rem rgba($black, .15) !default;
+$box-shadow:                  0 0 1rem rgba(#000000, .12) !default;
 $box-shadow-sm:               0 .125rem .25rem rgba($black, .075) !default;
 $box-shadow-lg:               0 1rem 3rem rgba($black, .175) !default;
 $box-shadow-inset:            inset 0 1px 2px rgba($black, .075) !default;
@@ -630,11 +696,12 @@ $line-height-base:            1.5 !default;
 $line-height-sm:              1.25 !default;
 $line-height-lg:              2 !default;
 
-$h1-font-size:                $font-size-base * 2.5 !default;
+// $h1-font-size:                $font-size-base * 2.5 !default;
+$h1-font-size:                $font-size-base * 3 !default;
 $h2-font-size:                $font-size-base * 2 !default;
 $h3-font-size:                $font-size-base * 1.75 !default;
 $h4-font-size:                $font-size-base * 1.5 !default;
-$h5-font-size:                $font-size-base * 1.25 !default;
+$h5-font-size:                $font-size-base * 1.125 !default;
 $h6-font-size:                $font-size-base !default;
 // scss-docs-end font-variables
 
