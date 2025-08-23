@@ -1,3 +1,48 @@
 .index-title {
   font-size: 100px;
 }
+.bg-circle {
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  border-radius: 50%;
+  opacity: 0.5; /* 50% */
+
+  /* 漸層背景 */
+  background: radial-gradient(
+    circle,
+    #D0FFD4 0%,
+    #E2FFE4 100%
+  );
+
+  /* 模糊效果 */
+  filter: blur(10px);
+
+  /* 預設位置：置中上方，可以依需求調整 */
+  top: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+.my-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  grid-auto-rows: 140px;
+  
+  img:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1 / span 2; // 左大圖
+  }
+  img:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1; // 中上
+  }
+  img:nth-child(3) {
+    grid-column: 2;
+    grid-row: 2; // 中下
+  }
+  img:nth-child(4) {
+    grid-column: 3;
+    grid-row: 1 / span 2; // 右大圖
+  }
+}

@@ -1,0 +1,26 @@
+.row-accent-strong{ background:#e8edf5; }   /* 最深強調行 */
+    .row-accent      { background:#eef2f6; }    /* 次深 */
+    .row-accent-lite { background:#f6f8fb; }    /* 淡灰 */
+    .table thead th{ border:0; }
+    .table tbody tr{ border:0; }
+    .table-group-divider{ border-top:1px solid #e5e7eb; }
+
+
+.btn01{
+    border-radius: 16px;
+    padding: 12px 20px;
+    background-color: #ffffff;
+    color: #000000;
+    & :hover {
+        background-color: #000000;
+        color: #ffffff;
+    }
+}
+.dropdown-toggle.no-caret::after { display: none !important; }
+
+/* 第1欄靠左，其他欄靠右 */
+.table.align-middle thead th:first-child,
+.table.align-middle tbody td:first-child { text-align: left; }
+
+.table.align-middle thead th:nth-child(n+2),
+.table.align-middle tbody td:nth-child(n+2) { text-align: right; }

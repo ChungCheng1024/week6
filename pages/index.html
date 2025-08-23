@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,19 +8,77 @@
   </head>
   <body>
     <%- include('./layout/header'); -%>
+    <div class="container mt-8 hero-title position-relative ">
+      <div class="row ">
+        <div class="col-8 mx-auto text-center mb-5">
+          <span class="fs-7 d-block fw-bold lh-1">一起陪伴、探索</span>
+          <span class="fs-7 d-block fw-bold">還有你那些未完成的夢</span>
+          <div
+            class="d-flex align-items-center justify-content-between p-3 bg-white mb-6"
+          >
+            <!-- 左邊文字 -->
+            <div class="text-natural-50 fs-5">
+              <p class="lh-1 text-start mb-1">自由工作很美，也很難。</p>
+              <p class="lh-1 text-start mb-0">
+                我們用 1 對 1 陪伴，陪你從第一步開始，直到夢想變成日常
+              </p>
+            </div>
 
-    <button type="button" class="btn btn-primary">Primary</button>
-<button type="button" class="btn btn-secondary">Secondary</button>
-<button type="button" class="btn btn-success">Success</button>
-<button type="button" class="btn btn-danger">Danger</button>
-<button type="button" class="btn btn-warning">Warning</button>
-<button type="button" class="btn btn-info">Info</button>
-<button type="button" class="btn btn-light">Light</button>
-<button type="button" class="btn btn-dark">Dark</button>
+            <!-- 右邊按鈕 -->
+            <button
+              class="btn btn-secondary d-flex align-items-center gap-2 fw-bold fs-4 py-4 px-20"
+            >
+              開始你的職旅<svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#141A1F"
+              >
+                <path
+                  d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
 
-<button type="button" class="btn btn-link">Link</button>
+    </div>
+    <main>
+      <div class="container-fluid my-grid-wrapper mb-8">
+        <div class="my-grid gap-4">
+          <img
+            src="../assets/images/hero-1.png"
+            class=" object-fit-cover w-100 h-100"
+          />
+          <img
+            src="../assets/images/hero-2.png"
+            class=" object-fit-cover w-100 h-100"
+          />
+          <img
+            src="../assets/images/hero-3.png"
+            class=" object-fit-cover w-100 h-100"
+          />
+          <img
+            src="../assets/images/hero-4.png"
+            class=" object-fit-cover w-100 h-100"
+          />
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-8 mx-auto">
+            <ul class="list-unstyled d-flex">
+              <li class="d-block"><img class="mb-4" src="../assets/images/logo-icon.svg" alt=""><h3 class="fs-1 fw-bold mb-4">他們已經踏上職旅<br>聽聽他們的故事</h3><p class="text-natural-50 fs-5 fw-normal">每一段職涯轉型都有獨特挑戰，這些曾經與你有相 <br> 同疑惑的夥伴，現在正過著他們嚮往的生活</p></li>
+              <li class="d-block">項目二</li>
+              <li class="d-block">項目三</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
     
-
     <%- include('./layout/footer'); -%>
 
     <script type="module" src="../main.js"></script>

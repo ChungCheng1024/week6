@@ -1,0 +1,49 @@
+.bg-gray{
+    background-color: $natural-95;
+}
+.btn-color{
+    background-color: $white;
+    border: $natural-85 1px solid;
+    color: $natural-10;
+    border-radius: 16px;
+    padding: 12px 20px;
+    
+    &:hover {
+        background-color: $natural-90;
+        
+    }
+    &:active {
+        background-color: $natural-85;
+    }
+   
+}
+
+.mid-color{
+    background: $white;
+
+}
+.re-main{
+    border-radius: 20px;
+}
+
+
+input[type="radio"] {
+    width: 20px;  /* 從 20px 調大 */
+    height: 20px;
+    accent-color: #0d6efd; /* 保持藍色 */
+  }
+
+
+
+.btn-color-1 {
+    background-color: $white;  /* 按鈕背景 */
+    color: $natural-10;          /* 初始文字與 SVG 顏色 */
+    border: $natural-85 1px solid;
+    border-radius: 16px;
+    padding: 12px 20px;
+  }
+  
+.btn-color-1:hover {
+    background-color: $blue-100;  /* hover 時背景 */
+    color: $white;             /* hover 時文字與 SVG 同步變白 */
+}
