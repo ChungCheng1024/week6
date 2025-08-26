@@ -1,126 +1,112 @@
 .index-title {
   font-size: 100px;
 }
+
 .bg-circle {
   position: absolute;
   width: 800px;
   height: 800px;
   border-radius: 50%;
   opacity: 0.5; /* 50% */
-
-  /* 漸層背景 */
-  background: radial-gradient(
-    circle,
-    #D0FFD4 0%,
-    #E2FFE4 100%
-  );
-
-  /* 模糊效果 */
+  background: radial-gradient(circle, #D0FFD4 0%, #E2FFE4 100%);
   filter: blur(10px);
-
-  /* 預設位置：置中上方，可以依需求調整 */
   top: -200px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 0;
 }
+
 .my-grid {
   display: grid;
   grid-template-columns: 2fr 1fr 2fr;
   grid-auto-rows: 140px;
-  
-  img:nth-child(1) {
-    grid-column: 1;
-    grid-row: 1 / span 2; // 左大圖
-  }
-  img:nth-child(2) {
-    grid-column: 2;
-    grid-row: 1; // 中上
-  }
-  img:nth-child(3) {
-    grid-column: 2;
-    grid-row: 2; // 中下
-  }
-  img:nth-child(4) {
-    grid-column: 3;
-    grid-row: 1 / span 2; // 右大圖
-  }
 }
 
+.my-grid img:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1 / span 2; /* 左大圖 */
+}
+.my-grid img:nth-child(2) {
+  grid-column: 2;
+  grid-row: 1; /* 中上 */
+}
+.my-grid img:nth-child(3) {
+  grid-column: 2;
+  grid-row: 2; /* 中下 */
+}
+.my-grid img:nth-child(4) {
+  grid-column: 3;
+  grid-row: 1 / span 2; /* 右大圖 */
+}
 
 /* 補充樣式 */
-.story-img{ height: 260px; object-fit: cover; }
-
- .badge-pill {
-    position:absolute; left:12px; top:12px;
-    padding:6px 12px; border-radius:999px;
-    background:#3B82F6; color:#fff; font-size:12px; white-space:nowrap;
-  }
-
-  .story-section {
-  background-color: #F0F3F5;   /* 直接整段背景 */
-  padding: 96px 0;            /* 上下留白 */
+.story-img {
+  height: 260px;
+  object-fit: cover;
 }
- /* 區塊一：上白下灰 */
-    .story-block-1 {
-      position: relative;
-      height: 890px;
-      background: #fff;         /* 預設白色 */
-      overflow: hidden;
-    }
-    .story-block-1::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;                /* 貼齊底部 */
-      height: 290px;            /* 底部灰色 */
-      background: #F0F3F5;
-      z-index: 0;
-    }
-    .story-block-1 .container {
-      position: relative;
-      z-index: 1;                /* 內容顯示在灰色上方 */
-    }
 
-    /* 區塊二：全灰 */
-    .story-block-2 {
-      height: 717px;
-      background: #F0F3F5;
-    }
+/* 區塊一：上白下灰 */
+.story-block-1 {
+  position: relative;
+  min-height: 890px;   /* 改 min-height，自然撐高 */
+  background: #fff;
+  overflow: visible;   /* 不裁切 */
+}
 
-    /* 卡片內 badge */
-    .badge-pill {
-      position:absolute; 
-      left:12px; 
-      top:12px;
-      padding:6px 12px; 
-      border-radius:999px;
-      background:#3B82F6; 
-      color:#fff; 
-      font-size:12px; 
-      white-space:nowrap;
-    }
-    .rounded-top-4 {border-top-left-radius:.75rem!important;border-top-right-radius:.75rem!important;}
-    .rounded-4 {border-radius:.75rem!important;}
+.story-block-1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 290px;
+  background: #F0F3F5;
+  z-index: 0;
+}
 
+.story-block-1 .container {
+  position: relative;
+  z-index: 1; /* 內容顯示在灰色上方 */
+}
+
+/* 區塊二：全灰 */
+.story-block-2 {
+  min-height: 717px;
+  background: #F0F3F5;
+}
+
+/* 卡片內 badge (合併) */
+.badge-pill {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: .375rem .75rem;
+  border-radius: 999px;
+  background: var(--bs-primary-70, #3B82F6);
+  color: #fff;
+  font-weight: 600;
+  font-size: .875rem;
+  white-space: nowrap;
+}
+
+.rounded-top-4 {
+  border-top-left-radius: .75rem !important;
+  border-top-right-radius: .75rem !important;
+}
+
+.rounded-4 {
+  border-radius: .75rem !important;
+}
 
 .fs-14 {
   font-size: 14px !important;
 }
+
 /* 固定卡片寬度，讓橫向排列可超出容器 */
-  .card-fixed { width: 400px; }
-
-  /* 徽章樣式（可改成你的主題色變數） */
-  .badge-pill{
-    position:absolute; top:1rem; left:1rem;
-    padding:.375rem .75rem; border-radius:999px;
-    background: var(--bs-primary-70, #778EEE);
-    color:#fff; font-weight:600; font-size:.875rem;
-  }
-
-
+.card-fixed {
+  width: 400px;
+}
 
 .rounded-card {
-  border-radius: $border-radius-card !important;
+  border-radius: 24px !important; /* 替換 $border-radius-card */
 }
