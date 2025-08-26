@@ -59,7 +59,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  height: 290px;
+  height: 780px;
   background: #F0F3F5;
   z-index: 0;
 }
@@ -109,4 +109,28 @@
 
 .rounded-card {
   border-radius: 24px !important; /* 替換 $border-radius-card */
+}
+.adv-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: .375rem .75rem;   /* 一點內距 */
+  background: #F0F3F5;
+  border-radius: 0;               /* 先清除其他角 */
+  border-top-right-radius: 12px;  /* 只右上角圓角 */
+  font-weight: 600;
+  font-size: 14px;
+  color: $natural-50;  
+  z-index: 3;
+}
+.pp{
+  color: $natural-50;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  font-weight: 400;
+}
+.bule-p{
+  color:$primary-60;
+  background: $natural-95;
+  
 }
